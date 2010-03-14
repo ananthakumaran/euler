@@ -15,16 +15,8 @@ object problem {
    * Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
    **/
    
-  def diff(limit:Int):Int = { 
-		val x = sumOfNumber(limit)
-		x*x - sumOfSquares(limit)
-  }
-  
-  def sumOfSquares(limit:Int):Int = {
-	   var result = 0	 
-      (1 to limit).foreach(x => { result += x*x })
-	  result
-  } 
+  def diff(limit:Int) = Math.pow(sumOfNumber(limit),2) - sumOfSquares(limit)
+  def sumOfSquares(limit:Int) = (1 to limit).foldLeft(0)((a,b) =>  a + b*b )
   def sumOfNumber(limit:Int) = (limit * (limit + 1))/2
 }
 
