@@ -9,15 +9,8 @@ object problem {
   
   def sumOfMultiples(limit:Int):Int = {
      var result = 0
-	    var i = 0
-	    while(i<limit)
-		{
-		    if(i%3 == 0 || i%5 == 0)
-			{
-			result += i
-			}
-			i+=1
-		}
+	 (0 until limit).filter( i => i%3==0 || i%5==0 ).foreach( result += _)
 	 result
   }
 }
+problem.main(null)
