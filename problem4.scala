@@ -12,14 +12,14 @@ object problem {
    
   def largestPalindrome(limit:Int):Int = {
 		var max = 0
-		for (i <- 100 until 999) {
-			 for(j <- 100 until 999) {
+		(100 until 999).foreach( i => {
+			 (100 until 999).foreach( j => {
 			    if(isPalindrome(i*j + "") && max < i*j)
 				{
 				    max = i*j
 				}
-			}
-		}
+			})
+		})
 		max
    }
 	  
