@@ -27,3 +27,6 @@ object problem {
    }
 }
 
+assert(problem.largestPrimeFactor(600851475143L) == 6857)
+
+
