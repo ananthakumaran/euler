@@ -10,20 +10,16 @@ object problem {
 
    def largestPrimeFactor(number:Long):Long = {
     var n = number
-	var i = 2L
-	while(i <= n) 
+	var i = 1L
+	while(n != 1) 
 	{
+	  i += 1   
 	  if( n % i == 0)
 	  {
 	    n = n/i
-		if(n == 1)
-		{
-		   return i
-		}
 	  }
-	  i += 1   
 	}
-	number
+	i
    }
 }
 
