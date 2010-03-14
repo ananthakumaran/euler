@@ -9,12 +9,9 @@ object problem {
    * Find the sum of all the even-valued terms in the sequence which do not exceed four million.
    */
  
-   def sum(limit:Int):Int = {
-    
-	var result = 0
-	var a = 1
-	var b = 1
-	var c = 0
+   def sum(limit:Int) = {
+	var result , c = 0
+	var a , b = 1
 	do {
 	  c = a+b
 	  if(c%2 == 0)
