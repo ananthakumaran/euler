@@ -13,10 +13,8 @@ object Problem {
 	
 	def prime(limit:Int) = {
 		 val sieve = new Array[Boolean](limit)
-		 for(i <- 2 until limit ; if(!sieve(i))){
-			if(isPrime(i)) {	
+		 for(i <- 2 until limit ; if(!sieve(i) && isPrime(i))){
 			    (2*i until (limit,i)).foreach( x => sieve(x) = true )
-			}
 		 }
 		(2 until limit).filter( i => !sieve(i) ).foldLeft(0L)(_+_)
 	}
