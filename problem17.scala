@@ -16,9 +16,7 @@ object Problem {
 
 	
 	def countOfLettersOfWordsOfNumbers(limit:Int):Int = {
-		var result = 0
-		(1 to limit).foreach(x => result += (toWord(x)).length )
-		result
+		(1 to limit).foldLeft(0)((a,b) =>  a + (toWord(b)).length)
 	}
 	 
 	 
