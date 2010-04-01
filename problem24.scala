@@ -15,12 +15,12 @@ object Problem {
 			 *
 			 **/
 
-	def perm = {		
-		var test = Array(0, 1, 2, 3, 4, 5, 6, 7, 8 , 9)
-		(1 until 1000000).foreach((x:Int) => { 
+	def perm(input:Array[Int],limit:Int) = {		
+		var test = input
+		(1 until limit).foreach((x:Int) => { 
 			nextPermutation(test) 
 		} )	
-		test.toList
+		test.mkString
 	}
 	def nextPermutation(cur : Array[Int]) = {
 		val length = cur.length
@@ -55,4 +55,4 @@ object Problem {
 	}
 }
 
-assert(Problem.perm == List(2,7,8,3,9,1,5,4,6,0))
+assert(Problem.perm(Array(0, 1, 2, 3, 4, 5, 6, 7, 8 , 9),1000000) == "2783915460")
