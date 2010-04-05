@@ -18,7 +18,7 @@ object Problem {
 		(2 until limit).filter(n => (div(n)<limit && n == div(div(n))) && n != div(n)).reduceLeft(_+_)
 	}
 	
-	def sumOfProperDivisors(n:Int) = (1 until n).filter(n%_ == 0).reduceLeft(_+_)
+	def sumOfProperDivisors(n:Int) = (1 to (n/2)+1).filter(n%_ == 0).reduceLeft(_+_)
 }
 
 assert(Problem.sumOfAmicableNumbers(10000) == 31626)
