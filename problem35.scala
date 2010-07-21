@@ -19,7 +19,7 @@ object Problem {
     val d = Math.pow(10,size - 1)
     var result = List(n)
     (1 until size).foreach(x => {
-      result = ((result.head % d * 10) + (result.head / d)).toInt :: result
+      result ::= ((result.head % d * 10) + (result.head / d)).toInt
     })
     result
   }
