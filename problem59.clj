@@ -41,7 +41,7 @@
 
 (let [message (map (fn [x]
 		     (Integer/parseInt (trim x)))
-		   (split #"," (slurp "/media/Studies/Git_Repo/euler/59.txt")))]
+		   (split #"," (slurp "59.txt")))]
 
   (let [possibilities (map
 		       (fn [permutation]
